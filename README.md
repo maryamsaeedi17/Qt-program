@@ -1,0 +1,2 @@
+# Qt-calculator
+Calculator app
