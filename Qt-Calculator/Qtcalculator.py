@@ -1,3 +1,4 @@
+from functools import partial
 import math
 from PySide6.QtWidgets import QApplication
 from PySide6.QtUiTools import QUiLoader
@@ -5,114 +6,18 @@ from PySide6.QtUiTools import QUiLoader
 global calc_status
 calc_status="not finished"
 
-def num_0():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() != "0":
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'0')
-    calc_status="not finished"
-
-def num_1():
+def num(x):
     global calc_status
     if calc_status=="finished":
         calculator_window.monitor.setText("")
 
     if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('1')
+        calculator_window.monitor.setText(x)
     else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'1')
-    calc_status="not finished"
-    
-def num_2():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('2')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'2')
-    calc_status="not finished"
-    
-def num_3():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('3')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'3')
-    calc_status="not finished"
-    
-def num_4():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('4')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'4')
-    calc_status="not finished"
-    
-def num_5():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('5')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'5')
-    calc_status="not finished"
-    
-def num_6():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('6')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'6')
+        calculator_window.monitor.setText(calculator_window.monitor.text()+x)
     calc_status="not finished"
 
-    
-def num_7():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
 
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('7')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'7')
-    calc_status="not finished"
-
-def num_8():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('8')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'8')
-    calc_status="not finished"
-
-def num_9():
-    global calc_status
-    if calc_status=="finished":
-        calculator_window.monitor.setText("")
-
-    if calculator_window.monitor.text() == "0":
-        calculator_window.monitor.setText('9')
-    else:
-        calculator_window.monitor.setText(calculator_window.monitor.text()+'9')
-    calc_status="not finished"
 
 def dot():
     calculator_window.monitor.setText(calculator_window.monitor.text()+'.')
@@ -243,16 +148,16 @@ calculator_window.show()
 
 calculator_window.monitor.setText('0')
 
-calculator_window.Button_0.clicked.connect(num_0)
-calculator_window.Button_1.clicked.connect(num_1)
-calculator_window.Button_2.clicked.connect(num_2)
-calculator_window.Button_3.clicked.connect(num_3)
-calculator_window.Button_4.clicked.connect(num_4)
-calculator_window.Button_5.clicked.connect(num_5)
-calculator_window.Button_6.clicked.connect(num_6)
-calculator_window.Button_7.clicked.connect(num_7)
-calculator_window.Button_8.clicked.connect(num_8)
-calculator_window.Button_9.clicked.connect(num_9)
+calculator_window.Button_0.clicked.connect(partial(num,"0"))
+calculator_window.Button_1.clicked.connect(partial(num,"1"))
+calculator_window.Button_2.clicked.connect(partial(num,"2"))
+calculator_window.Button_3.clicked.connect(partial(num,"3"))
+calculator_window.Button_4.clicked.connect(partial(num,"4"))
+calculator_window.Button_5.clicked.connect(partial(num,"5"))
+calculator_window.Button_6.clicked.connect(partial(num,"6"))
+calculator_window.Button_7.clicked.connect(partial(num,"7"))
+calculator_window.Button_8.clicked.connect(partial(num,"8"))
+calculator_window.Button_9.clicked.connect(partial(num,"9"))
 
 calculator_window.Button_dot.clicked.connect(dot)
 
