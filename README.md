@@ -41,6 +41,19 @@ ______
 
 ![t5](Qt-TicTocToe\t5.png)
 
+----------
+
+## Puzzle15
+
+- language: Python
+- pictures:
+![p1](Qt-Puzzle15\a.png)
+
+![p2](Qt-Puzzle15\b.png)
+
+![p3](Qt-Puzzle15\c.png)
+
+
 
 
 
