@@ -11,17 +11,17 @@ ______
 
 
 ### The main window
-![c1](Qt-Calculator\c1.png)
+![c1](c1.png)
 
 ### If an error occurs
 
 - For example: cot 0
 
-![c2](Qt-Calculator\c2.png)
+![c2](c2.png)
 
 - Or division by zero
 
-![c3](Qt-Calculator\c3.png)
+![c3](c3.png)
 
 ------------
 
@@ -31,15 +31,15 @@ ______
 
 - pictures:
 
-![t1](Qt-TicTocToe\t1.png)
+![t1](t1.png)
 
-![t2](Qt-TicTocToe\t2.png)
+![t2](t2.png)
 
-![t3](Qt-TicTocToe\t3.png)
+![t3](t3.png)
 
-![t4](Qt-TicTocToe\t4.png)
+![t4](t4.png)
 
-![t5](Qt-TicTocToe\t5.png)
+![t5](t5.png)
 
 ----------
 
@@ -47,11 +47,11 @@ ______
 
 - language: Python
 - pictures:
-![p1](Qt-Puzzle15\a.png)
+![p1](p1.png)
 
-![p2](Qt-Puzzle15\b.png)
+![p2](p2.png)
 
-![p3](Qt-Puzzle15\c.png)
+![p3](p3.png)
 
 
 

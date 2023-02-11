@@ -9,6 +9,8 @@ ties_num=0
 
 def next_turn():
     global player
+    global k
+    k=0
     for i in range(3):
         for j in range(3):
             button_array[i][j].setText("")
@@ -69,10 +71,12 @@ def set_mode(m):
     print(game_mode)
     new_game()
 
+k=0
+
 def play(row,col):
     global player
     global game_mode
-    k=0
+    global k
 
     if button_array[row][col].text()=="":
         if player==1:
@@ -127,6 +131,7 @@ button_array=[[game_window.btn_1, game_window.btn_2, game_window.btn_3],
 for i in range(3):
     for j in range(3):
         button_array[i][j].clicked.connect(partial(play, i, j))
+
 
 
 game_window.btn_newgame.clicked.connect(new_game)
