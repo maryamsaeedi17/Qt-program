@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>492</width>
+    <height>526</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SudoKu Game</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>471</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="grid_layout"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>492</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>Game</string>
+    </property>
+    <addaction name="new_menu"/>
+    <addaction name="open_file_menu"/>
+   </widget>
+   <addaction name="menuGame"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="new_menu">
+   <property name="text">
+    <string>New Game</string>
+   </property>
+  </action>
+  <action name="open_file_menu">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
